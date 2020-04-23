@@ -4,7 +4,7 @@ metadata:
   name: pod-example
 spec:
   containers:
-  - image: aaltheiab/project3/reverseproxy
+  - image: aaltheiab/reverseproxy
     name: reverseproxy
     imagePullPolicy: Always          
     resources:
