@@ -1,3 +1,33 @@
+# My own README comments:
+steps to deploy and run this udagram application.
+
+# Apply both secrets and configmap - Credentials
+kubectl apply -f env-configmap.yaml
+kubectl apply -f env-secret.yaml
+kubectl apply -f aws-secret.yaml
+
+# Apply Services
+kubectl apply -f backend-user-service.yaml
+kubectl apply -f backend-feed-service.yaml
+kubectl apply -f reverseproxy-service.yaml
+
+
+# Apply Deployments
+kubectl apply -f backend-user-deployment.yaml
+kubectl apply -f backend-feed-deployment.yaml
+kubectl apply -f reverseproxy-deployment.yaml
+
+# If you need to delete deployment
+kubectl delete -f backend-user-deployment.yaml
+kubectl delete -f backend-feed-deployment.yaml
+kubectl delete -f reverseproxy-deployment.yaml
+
+# After successful deployment you have to forward ports
+kubectl port-forward service/reverseproxy 8080:8080
+kubectl port-forward service/frontend 8100:8100
+
+
+
 # Udagram Image Filtering Microservice
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
