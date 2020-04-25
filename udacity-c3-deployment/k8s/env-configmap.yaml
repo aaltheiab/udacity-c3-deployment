@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: ${AWS_BUCKET}
-  AWS_PROFILE: ${AWS_PROFILE}
-  AWS_REGION: ${AWS_REGION}
-  JWT_SECRET: ${JWT_SECRET}
-  POSTGRESS_DB: ${POSTGRESS_DB}
-  POSTGRESS_HOST: ${POSTGRESS_HOST}
+  AWS_BUCKET: udagram-altheiab-dev
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: helloworld
+  POSTGRESS_DB: udacityrdstest
+  POSTGRESS_HOST: udacityrdstest1.ck5t7wmsrkh4.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100  
 metadata:
   name: env-config
